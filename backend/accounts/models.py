@@ -1,11 +1,8 @@
 from django.db import models
-
-# Create your models here.
 import uuid
 
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
-from django.db import models
 
 from .managers import UserManager
 
@@ -33,6 +30,12 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     is_staff = models.BooleanField(
         default=False
+    )
+
+    avatar = models.ImageField(
+        upload_to="avatars/",
+        null=True,
+        blank=True
     )
 
     created_at = models.DateTimeField(

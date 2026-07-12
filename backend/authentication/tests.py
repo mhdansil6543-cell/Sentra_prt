@@ -113,3 +113,12 @@ class AuthenticationAPITests(APITestCase):
         )
 
         self.assertNotEqual(refresh_response.status_code, status.HTTP_200_OK)
+
+    def test_schema_and_swagger_endpoints_are_available(self):
+        schema_response = self.client.get(reverse("schema"))
+        swagger_response = self.client.get(reverse("swagger-ui"))
+
+        self.assertEqual(schema_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(swagger_response.status_code, status.HTTP_200_OK)
+        self.assertIn("openapi:", schema_response.content.decode())
+        self.assertIn("swagger-ui", swagger_response.content.decode())
