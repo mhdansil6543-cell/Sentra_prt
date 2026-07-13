@@ -33,10 +33,11 @@ DEBUG = config(
     cast=bool
 )
 
-ALLOWED_HOSTS = config(
-    "ALLOWED_HOSTS",
-    default="localhost,127.0.0.1,.onrender.com"
-).split(",")
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".onrender.com",
+]
 
 # Application definition
 
@@ -227,10 +228,9 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
 
 }
-
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://sentra-emqd1603z-mhdansil6543-cells-projects.vercel.app",
+    "https://sentra-f2wzhkxdh-mhdansil6543-cells-projects.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
