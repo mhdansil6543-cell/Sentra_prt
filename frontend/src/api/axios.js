@@ -1,16 +1,10 @@
-
 import axios from "axios";
 
-const API_BASE_URL =
-  import.meta.env.DEV
-    ? "http://127.0.0.1:8000/api/v1"
-    : "https://sentra-prt.onrender.com/api/v1";
-
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: import.meta.env.DEV
+    ? "http://127.0.0.1:8000/api/v1"
+    : "https://sentra-prt.onrender.com/api/v1",
 });
-
-export default api;
 
 api.interceptors.request.use(
   (config) => {
