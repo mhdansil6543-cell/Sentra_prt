@@ -1,8 +1,13 @@
 
 import axios from "axios";
 
+const API_BASE_URL =
+  import.meta.env.DEV
+    ? "http://127.0.0.1:8000/api/v1"
+    : "https://sentra-prt.onrender.com/api/v1";
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: API_BASE_URL,
 });
 
 export default api;
