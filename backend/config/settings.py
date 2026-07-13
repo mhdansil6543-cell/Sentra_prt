@@ -228,9 +228,9 @@ SIMPLE_JWT = {
 
 }
 
-CORS_ALLOWED_ORIGINS = config(
-    "CORS_ALLOWED_ORIGINS",
-    default="http://localhost:5173"
-).split(",")
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "https://sentra-prt.vercel.app",
+]
 
 CORS_ALLOW_CREDENTIALS = True
