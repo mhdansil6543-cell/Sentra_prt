@@ -8,6 +8,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include, path
 
+from .views import home
+
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularSwaggerView,
@@ -32,6 +34,8 @@ except admin.sites.NotRegistered:
 # ==========================================================
 
 urlpatterns = [
+    path("", home),
+    
     # Admin
     path("admin/", admin.site.urls),
 
