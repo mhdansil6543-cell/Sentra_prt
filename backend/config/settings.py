@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     ".onrender.com",
+    ".vercel.app",
 ]
 
 # Application definition
@@ -229,8 +230,8 @@ SIMPLE_JWT = {
 
 }
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "https://sentra-f2wzhkxdh-mhdansil6543-cells-projects.vercel.app",
+    "http://sentra-prt.vercel.app",
+    "https://sentra-8fgm51mzm-mhdansil6543-cells-projects.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
