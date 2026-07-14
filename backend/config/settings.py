@@ -230,7 +230,7 @@ SIMPLE_JWT = {
 
 }
 CORS_ALLOWED_ORIGINS = [
-    "http://sentra-prt.vercel.app",
+    "https://sentra-prt.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
